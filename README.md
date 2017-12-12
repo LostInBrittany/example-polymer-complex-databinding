@@ -1,6 +1,6 @@
-## example-polymer-array-binding
+## example-complex-databinding
 
-A quick example of array data binding on Polymer
+A quick example of some comples data binding on Polymer
 
 
 ![Screenshot](./screenshot.png)
