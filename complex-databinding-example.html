@@ -209,7 +209,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         this.users.heros[this._editingIndexes.heros] = evt.detail;
 
         // Next line doesn't work, as the reference doesn't change...
-        this.set('users.heros', this.users.heros);
+        // this.set('users.heros', this.users.heros);
 
         // Let's create a new reference, in ES6 way...
         this.set('users.heros', [ ...this.users.heros ]);
@@ -238,7 +238,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       _validateNewUser(evt) {
         console.log('[complex-databinding-example] _validateNewUser - category ', this._heroOrVillain,' - user ', evt.detail);
         // Let's create a new reference, in ES6 way...
-        this.set(['users', this._heroOrVillain], [ ...this.users[this._heroOrVillain], evt.detail ]);
+        this.push(['users', this._heroOrVillain],  evt.detail );
 
 
       }
